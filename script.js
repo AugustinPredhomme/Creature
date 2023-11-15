@@ -21,19 +21,19 @@ class Orc extends Creature {
     }
   
     saysomething() {
-      console.log("Orc sound");
+        console.log("Orc sound");
     }
   
     identity() {
-      console.log(`I am an orc named ${this.name}`);
+        console.log(`I am an orc named ${this.name}`);
     }
   
     scream() {
-      console.log("Ahhhhhhhhh!");
+        console.log("Ahhhhhhhhh!");
     }
   
     bite() {
-      console.log("Orc biting");
+        console.log("Orc biting");
     }
 }
 
@@ -44,14 +44,34 @@ class Urukhai extends Orc {
     }
   
     saysomething() {
-      console.log("Urukhai sound");
+        console.log("Urukhai sound");
     }
   
     identity() {
-      console.log(`I am an Urukhai named ${this.name}`);
+        console.log(`I am an Urukhai named ${this.name}`);
     }
   
     kill() {
         console.log("The Urukhai kills its enemies.");
+    }
+}
+
+class ChiefOrc extends Orc {
+    constructor(name, age, strength) {
+        super(name, age, strength, true);
+        this.strength += 15;
+        this.isChief = true;
+    }
+  
+    saysomething() {
+        console.log("Chief Orc sound");
+    }
+  
+    identity() {
+        console.log(`I am a Chief Orc named ${this.name}`);
+    }
+  
+    giveOrder() {
+        console.log("The Chief Orc gives an order.");
     }
 }
