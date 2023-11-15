@@ -75,3 +75,29 @@ class ChiefOrc extends Orc {
         console.log("The Chief Orc gives an order.");
     }
 }
+
+const creature1 = new Creature("Mysterious Being", 1000, 5);
+const creature2 = new Creature("Mystical Entity", 500, 8);
+
+const orc1 = new Orc("Grommash", 35, 25, true);
+const orc2 = new Orc("Thrall", 32, 22, false);
+
+const urukhai1 = new Urukhai("Urukhai 1", 40, 30);
+const urukhai2 = new Urukhai("Urukhai 2", 38, 28);
+
+const chiefOrc1 = new ChiefOrc("Chief 1", 45, 35);
+const chiefOrc2 = new ChiefOrc("Chief 2", 42, 33);
+
+orc1.scream();
+orc1.bite();
+urukhai1.kill();
+chiefOrc1.giveOrder();
+
+creature1.saysomething();
+creature2.identity();
+
+orc1.saysomething();
+orc2.identity();
+
+urukhai1.saysomething();
+chiefOrc1.identity();
