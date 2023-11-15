@@ -1,8 +1,8 @@
 class Creature {
     constructor(name, age, strength) {
-      this.name = name;
-      this.age = age;
-      this.strength = strength;
+        this.name = name;
+        this.age = age;
+        this.strength = strength;
     }
   
     saysomething() {
@@ -16,8 +16,8 @@ class Creature {
 
 class Orc extends Creature {
     constructor(name, age, strength, hasRage) {
-      super(name, age, strength);
-      this.hasRage = hasRage;
+        super(name, age, strength);
+        this.hasRage = hasRage;
     }
   
     saysomething() {
@@ -34,5 +34,24 @@ class Orc extends Creature {
   
     bite() {
       console.log("Orc biting");
+    }
+}
+
+class Urukhai extends Orc {
+    constructor(name, age, strength) {
+        super(name, age, strength, true);
+        this.strength += 10;
+    }
+  
+    saysomething() {
+      console.log("Urukhai sound");
+    }
+  
+    identity() {
+      console.log(`I am an Urukhai named ${this.name}`);
+    }
+  
+    kill() {
+        console.log("The Urukhai kills its enemies.");
     }
 }
